@@ -1,8 +1,0 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 3.20)
-
-PROJECT(mylib)
-
-FILE(GLOB SRCS
-	*.cpp *.h)
-
-add_library(${PROJECT_NAME} ${SRCS})
