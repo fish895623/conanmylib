@@ -23,7 +23,7 @@ class MylibConan(ConanFile):
 
     def build(self):
         cmake = CMake(self)
-        cmake.configure(source_folder=".")
+        cmake.configure(source_folder="src")
         cmake.build()
 
         # Explicit way:
@@ -32,7 +32,7 @@ class MylibConan(ConanFile):
         # self.run("cmake --build . %s" % cmake.build_config)
 
     def package(self):
-        self.copy("*.h", dst="include", src=".")
+        self.copy("*.h", dst="include", src="src")
         self.copy("*.dll", dst="bin", keep_path=False)
         self.copy("*.so", dst="lib", keep_path=False)
         self.copy("*.dylib", dst="lib", keep_path=False)
