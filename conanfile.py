@@ -1,4 +1,4 @@
-from conans import ConanFile, CMake, tools
+from conans import ConanFile, CMake
 
 
 class MylibConan(ConanFile):
@@ -23,7 +23,7 @@ class MylibConan(ConanFile):
 
     def build(self):
         cmake = CMake(self)
-        cmake.configure()
+        cmake.configure(cache_build_folder='build')
         cmake.build()
 
     def package(self):
@@ -35,4 +35,3 @@ class MylibConan(ConanFile):
 
     def package_info(self):
         self.cpp_info.libs = ["mylib"]
-
