@@ -1,4 +1,15 @@
 CMakeCache.txt
 CMakeFiles/
 Makefile
-cmake_install.cmake
+
+*.cmake
+conanbuildinfo.txt
+conaninfo.txt
+conan.lock
+graph_info.json
+
+*.a
+*.so
+*.dll
+*.dylib
+
